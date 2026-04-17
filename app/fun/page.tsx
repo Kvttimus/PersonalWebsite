@@ -14,7 +14,7 @@ const categoryLabel: Record<string, string> = {
 
 export default function FunPage() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <TerminalHeader>cat fun.txt</TerminalHeader>
       <PageTitle subtitle="the non-resume part of me: art, trips, photos, and other detours.">
         fun

@@ -4,7 +4,7 @@ import { site } from "@/content/site";
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-border">
-      <div className="mx-auto max-w-3xl px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-muted font-mono">
+      <div className="mx-auto max-w-5xl px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-muted font-mono">
         <span>
           <span className="text-accent">$</span> echo &quot;made with care by {site.name.toLowerCase()}&quot;
         </span>

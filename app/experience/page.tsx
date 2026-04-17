@@ -9,7 +9,7 @@ export default function ExperiencePage() {
   const items = getExperience();
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <TerminalHeader>ls ./experience</TerminalHeader>
       <PageTitle subtitle="clubs, hackathons, nonprofits, internships — places i've shown up.">
         experience

@@ -16,7 +16,7 @@ export function Nav() {
 
   return (
     <header className="sticky top-0 z-40 bg-background/80 backdrop-blur border-b border-border">
-      <div className="mx-auto max-w-3xl px-6 py-4 flex items-center justify-between">
+      <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
         <Link href="/" className="font-mono text-sm text-accent hover:opacity-80">
           ~/{site.name.toLowerCase()}
         </Link>
@@ -54,7 +54,7 @@ export function Nav() {
 
       {open && (
         <div className="md:hidden border-t border-border">
-          <nav className="mx-auto max-w-3xl px-6 py-3 flex flex-col gap-2 font-mono text-sm">
+          <nav className="mx-auto max-w-5xl px-6 py-3 flex flex-col gap-2 font-mono text-sm">
             {site.nav.map((item) => (
               <Link
                 key={item.href}

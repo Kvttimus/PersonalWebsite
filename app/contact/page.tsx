@@ -8,7 +8,7 @@ export const metadata = { title: "contact" };
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <TerminalHeader>./contact.sh</TerminalHeader>
       <PageTitle subtitle="the best ways to reach me. emails are read; cold DMs too.">
         contact

@@ -7,7 +7,7 @@ export const metadata = { title: "about" };
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <TerminalHeader>cat about.txt</TerminalHeader>
       <PageTitle subtitle={`a little more about ${site.name.toLowerCase()}.`}>about</PageTitle>
 

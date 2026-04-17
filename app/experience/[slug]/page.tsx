@@ -29,7 +29,7 @@ export default async function ExperienceDetailPage(props: PageProps<"/experience
   const { frontmatter, body } = entry;
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <Link
         href="/experience"
         className="inline-flex items-center gap-1.5 font-mono text-sm text-muted hover:text-accent transition-colors mb-8"

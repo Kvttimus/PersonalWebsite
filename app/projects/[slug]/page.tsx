@@ -29,7 +29,7 @@ export default async function ProjectDetailPage(props: PageProps<"/projects/[slu
   const { frontmatter, body } = project;
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <Link
         href="/projects"
         className="inline-flex items-center gap-1.5 font-mono text-sm text-muted hover:text-accent transition-colors mb-8"

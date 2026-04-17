@@ -39,7 +39,7 @@ export default function Home() {
   const funPreview = funItems.slice(0, 4);
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24 space-y-24 md:space-y-32">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-24 space-y-24 md:space-y-32">
       {/* Hero */}
       <section>
         <p className="font-mono text-sm text-muted mb-6">
@@ -48,9 +48,10 @@ export default function Home() {
 
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.15]">
           hi, i&rsquo;m {site.fullName.toLowerCase()}.
-          <br />
-          i&rsquo;m a <RotatingWords words={site.rotatingWords} />
         </h1>
+        <p className="mt-3 text-lg md:text-xl text-muted">
+          i&rsquo;m a <RotatingWords words={site.rotatingWords} />
+        </p>
 
         <p className="mt-6 text-lg text-muted max-w-xl leading-relaxed">{site.heroIntro}</p>
 

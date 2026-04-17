@@ -12,7 +12,7 @@ export default function ResumePage() {
   const pdfExists = fs.existsSync(path.join(process.cwd(), "public", "resume.pdf"));
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <TerminalHeader>open resume.pdf</TerminalHeader>
       <PageTitle subtitle="my resume — view below or download the PDF.">resume</PageTitle>
 

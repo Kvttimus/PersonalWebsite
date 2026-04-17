@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   const projects = getProjects();
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <TerminalHeader>ls ./projects</TerminalHeader>
       <PageTitle subtitle="things i've built — from weekend experiments to more serious work.">
         projects
