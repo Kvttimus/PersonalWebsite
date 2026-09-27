@@ -1,0 +1,31 @@
+---
+title: "Figgy"
+blurb: "Interception and Modification of Compilation Commands Across Build Systems"
+date: "2026-07-01"
+tags: ["execve(2)", "syscall modification", "ptrace", "seccompBPF"]
+hasDetail: true
+featured: true
+link: "https://optional-external-link.com"
+---
+
+## What it is
+
+Figgy is a Go tool I built during a six-week research internship at Boston University's Security Lab. It intercepts and modifies every execve(2) syscall a Linux system makes, including subsequent forks and clones. That makes it useful for generating LLVM bitcode, adding instrumentation, preparing packages for fuzzing with AFL, and many more use cases.
+
+## What I did
+
+- Built the core tracer with ptrace: it launches the build, catches each execve(2) call, and parses the path, arguments, and environment variables.
+- Added three modes for changing those calls: one rewrites the original call in place, and two run a modified copy under Figgy's own permissions instead.
+- Designed a plugin interface so users can write their own transformations in Go by implementing just two functions, Name() and Transform().
+- Added an optional seccomp-BPF filter that forwards only execve calls to the tracer, so every other syscall runs at native speed instead of paying ptrace's extra context switches.
+- **Tradeoff**: Go can't install a seccomp filter between fork and exec, so I wrote a small C helper to launch the traced process, then hand control back to Go. This also avoided Go's multithreading issues, since C only has to manage one thread.
+- **Bug fix**: The tracer kept failing on certain programs. I traced it to setuid/setgid binaries, which Linux won't let you trace, and added a check that detaches from them automatically.
+- Tested Figgy end-to-end by building, instrumenting, and fuzzing 9 real packages with AFL, then presented the work as a poster at the program's research symposium.
+
+## What I learned
+
+Before this project, I knew system calls existed and that an operating system depends on them, but not how they actually work. Tracing and rewriting them firsthand helped me learn how a process hands control to the kernel and how arguments move between memory spaces.
+
+## Poster
+
+<PdfEmbed src="/figgy-poster.pdf" title="figgy-poster.pdf" />
