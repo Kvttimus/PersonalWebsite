@@ -49,11 +49,11 @@ export default function Home() {
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.15]">
           hi, i&rsquo;m {site.fullName.toLowerCase()}.
         </h1>
-        <p className="mt-3 text-lg md:text-xl text-muted">
-          i&rsquo;m a <RotatingWords words={site.rotatingWords} />
+        <p className="mt-3 text-lg md:text-xl text-foreground">
+          i&rsquo;m a <RotatingWords words={site.rotatingWords} /> {site.heroSuffix}
         </p>
 
-        <p className="mt-6 text-lg text-muted max-w-xl leading-relaxed">{site.heroIntro}</p>
+        <p className="mt-6 text-lg text-foreground max-w-xl leading-relaxed">{site.heroIntro}</p>
 
         <div className="mt-8 flex flex-wrap gap-3 font-mono text-sm">
           <Link

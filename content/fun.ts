@@ -1,6 +1,6 @@
 // Gallery items for the /fun page.
-// Replace these placeholders with your real art, photos, trips, or whatever you want to share.
-// Add as many as you like — the grid auto-fills.
+// Replace these placeholders with my real art, photos, trips, or whatever I want to share.
+// Add as many as I like — the grid auto-fills.
 
 export type FunItem = {
   title: string;
@@ -17,18 +17,18 @@ export const funItems: FunItem[] = [
     category: "art",
   },
   {
-    title: "A trip you loved",
+    title: "A trip I loved",
     caption: "One or two sentences about where and why.",
     category: "travel",
   },
   {
-    title: "Something you photographed",
-    caption: "What you were doing and why it caught your eye.",
+    title: "Something I photographed",
+    caption: "What I was doing and why it caught my eye.",
     category: "photo",
   },
   {
     title: "Something else",
-    caption: "Books, playlists, hobbies — anything that's you.",
+    caption: "Books, playlists, hobbies — anything that's me.",
     category: "misc",
   },
 ];

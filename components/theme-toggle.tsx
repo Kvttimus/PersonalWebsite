@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Moon, Sun } from "lucide-react";
+import { SunCat, MoonCat } from "@/components/cat-icons";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -20,9 +20,9 @@ export function ThemeToggle() {
       className="inline-flex size-8 items-center justify-center rounded-md border border-border text-muted hover:text-accent hover:border-accent transition-colors"
     >
       {mounted ? (
-        isDark ? <Sun className="size-4" /> : <Moon className="size-4" />
+        isDark ? <SunCat className="size-5" /> : <MoonCat className="size-5" />
       ) : (
-        <span className="size-4" />
+        <span className="size-5" />
       )}
     </button>
   );
